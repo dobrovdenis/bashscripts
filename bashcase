@@ -1,0 +1,19 @@
+#!/bin/bash
+
+read -p "choose dir: " dir
+
+echo -e "\nchoose 1 to show files\nchoose 2 to show hidden files\n"
+
+read -p  " 1 or 2 ?  " choice
+
+case $choice in
+     1)
+          ls $dir
+          ;;
+     2)
+          ls -la $dir
+          ;;
+     *)
+          echo "Sorry, invalid input"
+          ;;
+esac
